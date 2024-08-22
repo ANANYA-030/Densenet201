@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    * {
+      
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+  }
+  .i{
+      border-radius: 1em;
+  }
+  .header {
+      min-height: 100vh;
+      width: 100%;
+      /* background-image:url("backgroundstar.jpg"); */
+      /* background-color: #282829; */
+      /* background-color: #0f0e13; */
+      background-color: #1b1b1e;
+      background-image:
+            radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 75%),
+            radial-gradient(at 50% 0%, rgb(97, 206, 214) 0, transparent 75%),
+            radial-gradient(at 100% 0%, rgb(116, 9, 247) 0, transparent 75%);
+
+
+     
+          /* radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 75%),
+          radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 75%);*/
+      
+  }
+  nav {
+      display: flex;
+      padding: 2% 4%;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .nav-links {
+      flex: 1;
+      text-align: right;
+      margin-right: 1em;
+  }
+  
+  .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 1.5em 3em;
+      position: relative;
+  }
+  
+  .nav-links ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+  }
+  
+  .nav-links ul li::after {
+      content: '';
+      width: 0%;
+      height: 3px;
+      background: #27ee31;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+  }
+  
+  .nav-links ul li:hover::after {
+      width: 100%;
+  }
+  
+  .eyeImage{
+      width:100px;
+      height:200px;
+      margin-top: 7%;
+      margin-left: 10%;
+      border-radius: 1em;
+  }
+  .text-box {
+      margin-left:25%;
+      width: 100%;
+      color: white;
+      position: absolute;
+      top: 30%;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .text-box h1 {
+      font-size: 30px;
+      font-weight: 300;
+  }
+  
+  .subHeading {
+      padding: 2em 2em;
+      border-radius: 2em;
+      margin-top: 0em;
+      font-size: 20px;
+      color:grey;
+  }
+  
+  .button1 {
+      margin-top: -10em;
+      padding: .6em .6em;
+      border-radius: 1em;
+      background-color: rgb(235, 170, 170);
+  }
+  .user{
+      margin-top:-5em;
+      width: 100%;
+      color: white;
+      top: 30%;
+      align-items: center;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+  }
+  .userHeading{
+      align-items: center;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 300;
+      color:rgb(119, 115, 115);
+      margin-bottom: 2em;
+  }
+  .user{
+      background-color: #1b1b1e;
+     
+  }
+  .form{
+      display: flex;
+      flex-direction: column;
+      height: 530px;
+      width: 400px;
+      align-items: center;
+      margin:auto;
+      background-color: rgba(43, 42, 42, 0.5);
+      background-image:
+      radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+      radial-gradient(at 50% 0%, rgb(97, 206, 214) 0, transparent 50%),
+      radial-gradient(at 100% 0%, rgb(116, 9, 247) 0, transparent 50%);
+      /*
+      radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+      radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+      */
+      box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+      border-radius: 25px;
+  }
+  
+  .box11{
+      margin-top: 30px;
+      margin-bottom:15px;
+      padding:8px;
+      width:65%;
+      border:none;
+      outline:none;
+      border-radius: 20px;
+      background-color: rgba(59, 58, 58, 0.5);
+      box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+      color:white;
+      font-size: 1rem;
+      font-weight: 300;
+  }
+  .box2,.box3,.box4,.form-control{
+      padding:8px;
+      margin-top:15px; 
+      margin-bottom:15px;
+      width:65%;
+      height: 200px;
+      border:none;
+      outline:none;
+      border-radius: 20px;
+      background-color: rgba(59, 58, 58, 0.5);
+      box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+      color:white;
+      font-size: 1rem;
+      font-weight: 300;
+  }
+  .form-label{
+      color:white;
+      font-size: .6em;
+      font-weight: 300;
+  }
+  .btn-lg {
+      font-weight: 300;
+      font-size:0.6em;
+      margin-top: 0em;
+      padding: 0.5em 0.5em;
+      border-radius: .8em;
+      background-color: rgb(235, 170, 170);
+  }
+  
+  
+  .button1:hover {
+      background-color: rgb(230, 105, 105);
+  }
+  
+  .hero-btn {
+      margin-top: -4em;
+      text-decoration: none;
+      font-size: 1.3em;
+      color: rgb(32, 31, 31);
+  }
+  .services{
+      margin-top:-2em;
+      background-color: #1b1b1e;
+  }
+  .head{
+      width: 100%;
+      color: white;
+      /* position: absolute; */
+      top: 30%;
+      align-items: center;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+  }
+  .subHeading2{
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 300;
+      color:rgb(119, 115, 115);
+  }
+  .aboutUs{
+      width:520px;
+      height:330px;
+      margin-top: 5%;
+      margin-left: 5%;
+      border-radius: 1em;
+  }
+  .info {
+      margin-left:20%;
+      width: 100%;
+      color: white;
+      position: relative;
+      margin-top:-380px;
+      text-align: center;
+  }
+  .info h1 {
+      font-size: 25px;
+      font-weight: 300;
+  
+  }
+  .subHeading3 {
+      padding: 2em 2em;
+      border-radius: 2em;
+      margin-top: -2em;
+      font-size: 15pcx;
+      color:grey;
+      display:inline-block;
+      text-align-last: left;
+  }
+  
+  .details{
+      margin-top:10px;
+      width: 100%;
+      color: white;
+      position: absolute;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+  }
+  .map{
+      margin-top:rem;
+      margin-left: 5%;
+      border-radius: 1em;
+  }
+  .footer {
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+      color: white;
+  }
+  
+  .footer h4,p {
+      margin-bottom: 10px;
+      margin-top: 5px;
+      font-weight: 600;
+      color: rgb(82, 81, 81);
+  }
+  
+  .icons .fa {
+      margin-top: -10em;
+      color: rgb(221, 61, 80);
+      margin: 0 10px;
+      cursor: pointer;
+      padding: 10px 0;
+      font-size: 1.5em;
+  }
+  </style>
+  <title>Breast Tumor Prediction using DenseNet201</title>
+  
+</head>
+
+<body>
+  <section class="first">
+    <section class="header">
+      <nav>
+        <a href=""><img src="../static/logo.png" width="70px" height="50px"><img class="i" src="../static/logo2.png" width="100px"
+            height="40px"></a>
+        
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#predict">PREDICT</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="box1">
+        <img src="../static/ss.gif" class="aboutUs"width="200px" height="150px"></img>
+        <div class="text-box">
+          <h1>Your Personal health assistant</h1>
+          <p class="subHeading">With modern technology and deep learning model <br>we provide patients with quick
+            information<br> about any breast tumor by 
+            <br>by analizing its scanned images.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="services" id='about'>
+        <p class="head">More about us:</p>
+        <p class="subHeading2">Welcome! Here, you'll discover detailed information about model used,<br> the range of services we offer, and comprehensive reports providing insights into your breast health.</p>
+        <img src="../static/image3.jpeg" class="aboutUs"></img>
+        <div class="info">
+          <h1>Model Used</h1>
+          <p class="subHeading3">Our model is trained using DenseNet201, a powerful deep learning architecture,<br> on the BreakHis dataset to accurately classify breast tissue abnormalities as <br>benign or malignant. </p>
+          <h1>Service we provide</h1>
+          <p class="subHeading3">At our facility, we offer state-of-the-art breast cancer diagnosis utilizing advanced<br> AI technology. Our personalized recommendations are tailored to your specific<br> needs, ensuring comprehensive care and support throughout your journey.
+          </p>
+          <h1>Patient's report</h1>
+          <p class="subHeading3">The patient's report includes the prediction results of the DenseNet201 model,<br> indicating whether the identified abnormalitie is classified as benign or malignant.<br> Additionally, it offers insights into potential future treatment advice to diagnosis.</p>
+        </div><br><br>
+        <!--<div class="details">Get More Details Here</div><br><br><br><br>-->
+      </section><br><br><br><br><br><br>
+    <section class="user" id="predict">
+      <p class="user">Enter User's details:</p>
+      <p class="userHeading">A quick breast cancer diagnosis test just a click away...</p>
+      <form id="prediction-form" action="/" class="form" method="post" enctype="multipart/form-data"> 
+        <input type="text" name="name" class="box11" placeholder="Enter Patient's name">
+        <input type="email" name="emailId" class="box2" placeholder="Enter email Id">
+        <input type="text" name="contact" class="box3" placeholder="Enter contact no">
+        <input type="number" name="age" class="box4" placeholder="Enter age">
+        <label class="form-label" for="customFile">Upload breast cancer photo</label>
+        <input type="file" class="form-control" id="customFile" name="imagefile"><br><br>
+        <button type="Predict Image" class="btn-lg" >Predict </button>
+      </form>
+      <br><br><br>
+
+    </section>
+    
+
+  
+    <section class="footer" id="contact">
+      <h4>Contact us</h4>
+      <div class="icons">
+        <a href="mailto:xyz@gmail.com">
+            <i class="fa fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/linkedin_profile" target="_blank">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/profile_name/" target="_blank">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <p>2024 All Rights Reserved</p>
+        <p></p>
+      </div>
+    </section>
+   
+</body>
+
+</html>
